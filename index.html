@@ -1,14 +1,92 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="z5_BqAydSqJfw1bP31RcuMtqCAfTh_yrmJgIPQQew2M">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>التقني مشاري محمد | معمار أنظمة رقمية</title>
-<meta name="description" content="التقني مشاري محمد - معمار أنظمة رقمية، مطور تطبيقات أندرويد، ومحلل أسواق مالية من الكويت.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<!-- كود الربط الخوارزمي لكيان مشاري محمد (Wikidata Q140157337) -->
+<meta name="google-site-verification" content="z5_BqAydSqJfw1bP31RcuMtqCAfTh_yrmJgIPQQew2M">
+
+<!-- SEO TITLE & DESCRIPTION - عنوان واحد فقط -->
+<title>التقني مشاري محمد | مطور GIF4Sticker لتحويل الصور لملصقات واتساب</title>
+<meta name="description" content="التقني مشاري محمد - معمار أنظمة رقمية ومطور تطبيقات أندرويد كويتي. مطور تطبيق GIF4Sticker لتحويل الصور و GIF إلى ملصقات واتساب على Google Play. خبرة +10 سنوات.">
+<link rel="canonical" href="https://masharyweb.site/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="مشاري محمد">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://masharyweb.site/">
+<meta property="og:title" content="التقني مشاري محمد | مطور GIF4Sticker">
+<meta property="og:description" content="معمار أنظمة رقمية ومطور تطبيقات أندرويد كويتي. مطور تطبيق GIF4Sticker لتحويل الصور إلى ملصقات واتساب.">
+<meta property="og:image" content="https://masharyweb.site/profile.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="التقني مشاري محمد | مطور GIF4Sticker">
+<meta name="twitter:description" content="مطور تطبيقات أندرويد كويتي - تطبيق GIF4Sticker لتحويل الصور لملصقات واتساب">
+<meta name="twitter:image" content="https://masharyweb.site/profile.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- كيان موحد محصن - ويكي بيانات Q140157337 + ويكيبيديا -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Meshari Mohammad","alternateName":"مشاري محمد","url":"https://masharyweb.site","image":"https://masharyweb.site/profile.jpg","jobTitle":"Programmer & Mobile Application Developer","nationality":{"@type":"Country","name":"Kuwait"},"birthDate":"1984-07-19","sameAs":["https://www.wikidata.org/wiki/Q140157337","https://github.com/Masharyweb","https://twitter.com/Masharyweb","https://www.instagram.com/Masharyweb","https://www.tiktok.com/@masharyweb","https://www.facebook.com/masharyweb","https://www.youtube.com/channel/UClRd1k0RQQYCisN8q4pCK7g"]}
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"مشاري محمد",
+  "alternateName":["التقني مشاري محمد","Meshari Mohammad"],
+  "url":"https://masharyweb.site",
+  "image":"https://masharyweb.site/profile.jpg",
+  "jobTitle":"Programmer & Mobile Application Developer",
+  "nationality":{"@type":"Country","name":"Kuwait"},
+  "birthDate":"1984-07-19",
+  "sameAs":[
+    "https://www.wikidata.org/wiki/Q140157337",
+    "https://ar.wikipedia.org/wiki/مشاري_محمد",
+    "https://github.com/Masharyweb",
+    "https://twitter.com/Masharyweb",
+    "https://www.instagram.com/Masharyweb",
+    "https://www.tiktok.com/@masharyweb",
+    "https://www.facebook.com/masharyweb",
+    "https://www.youtube.com/channel/UClRd1k0RQQYCisN8q4pCK7g"
+  ]
+}
 </script>
+
+<!-- تطبيقك كأصل رقمي - يربط موقعك بـ Google Play -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"GIF4Sticker",
+  "description":"تطبيق أندرويد احترافي لتحويل الصور وملفات GIF إلى ملصقات واتساب بجودة عالية",
+  "operatingSystem":"Android",
+  "applicationCategory":"MultimediaApplication",
+  "author":{"@type":"Person","name":"مشاري محمد","url":"https://masharyweb.site"},
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "url":"https://masharyweb.site"
+}
+</script>
+
 <style>
 :root{--ink:#0D0D0D;--white:#FAFAFA;--accent:#1A6EFF;--accent2:#00C6A2;--muted:#6B7280;--border:#E5E7EB;--card:#F8F9FB;--mono:'Space Mono',monospace;--sans:'Cairo',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -63,7 +141,9 @@ footer{text-align:center;padding:2rem 5%;font-family:var(--mono);font-size:.74re
 @media(max-width:768px){
 .nav-links{position:fixed;top:68px;left:0;background:var(--white);flex-direction:column;width:100%;padding:1.2rem 5%;gap:1rem;border-bottom:1px solid var(--border);transform:translateY(-150%);transition:transform .3s;box-shadow:0 8px 20px rgba(0,0,0,.06)}
 .nav-links.open{transform:translateY(0)}.nav-toggle{display:block}.nav-name span{display:none}}
-</style></head><body>
+</style>
+</head>
+<body>
 
 <nav>
 <a href="#" class="nav-brand"><img src="profile.jpg" class="nav-photo" alt="التقني مشاري محمد"><div class="nav-name"><strong>التقني مشاري محمد</strong><span>معمار أنظمة رقمية</span></div></a>
@@ -105,7 +185,7 @@ footer{text-align:center;padding:2rem 5%;font-family:var(--mono);font-size:.74re
 
 <section id="projects"><div class="lbl">// 03 — PROJECTS</div><h2 class="ttl">المشاريع والأصول</h2><div class="div"></div>
 <div class="grid">
-<div class="card"><span class="stt s-live">Play Store</span><div class="ci">🎭</div><h3>GIF4Sticker</h3><p>تطبيق أندرويد احترافي لصناعة الملصقات على متجر Google Play.</p></div>
+<div class="card"><span class="stt s-live">Play Store</span><div class="ci">🎭</div><h3>GIF4Sticker</h3><p>تطبيق أندرويد احترافي لصناعة الملصقات على متجر Google Play.</p><div class="tags"><span class="tg">Android</span><span class="tg">WhatsApp Stickers</span></div></div>
 <div class="card"><span class="stt s-dev">قيد التطوير</span><div class="ci">📄</div><h3>Smart PDF</h3><p>أداة رقمية مبنية بـ Jetpack Compose لمعالجة ملفات PDF.</p></div>
 <div class="card"><span class="stt s-dev">نشط</span><div class="ci">🗂️</div><h3>SnapGrab.net</h3><p>دليل رقمي ذكي مبني على WordPress Multisite.</p></div>
 <div class="card"><span class="stt s-fut">مستقبلي</span><div class="ci">📣</div><h3>مشروع Wadeh</h3><p>تطبيق استراتيجي يستهدف سوق الإعلانات.</p></div>
@@ -123,4 +203,5 @@ footer{text-align:center;padding:2rem 5%;font-family:var(--mono);font-size:.74re
 </div></div></section>
 
 <footer><p>© 2025 التقني مشاري محمد — بُني بشغف من الكويت 🇰🇼</p></footer>
-</body></html>
+</body>
+</html>
